@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="zegar.css">
+        <title>Odliczanie czasu</title>
+
+    </head>
+
+    <body onload="warsaw(), tokyo(), madrid(), newyork(), london(), beijing()">
+        <!-- WArsaw Tokyo Madrid New York London Beijing-->
+        
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="card">
+                                    <div class="carousel-item-warsaw">
+                                        <div class="title" id="Warsaw">Warsaw</div>
+                                        <div id="dataWs"></div>
+                                        <div id="czasWs"></div>
+                                        <div type="button" class="btn-prev carousel-control" id="previous-ws"><</div>
+                                        <div type="button" class="btn-next carousel-control" id="next-ws">></div>
+                                    </div>
+                                                                    
+                                    <div class="carousel-item-tokyo">
+                                        <div class="title" id="Tokyo">Tokyo</div>
+                                        <div id="dataTk"></div>
+                                        <div id="czasTk"></div>
+                                        <div type="button" class="btn-prev carousel-control" id="previous-tk"><</div>
+                                        <div type="button" class="btn-next carousel-control" id="next-tk">></div>
+                                    </div> 
+                                    
+                                    <div class="carousel-item-madrid">
+                                        <div class="title" id="Madrid">Madrid</div>
+                                        <div id="dataMd"></div>
+                                        <div id="czasMd"></div>
+                                        <div type="button" class="btn-prev carousel-control" id="previous-md"><</div>
+                                        <div type="button" class="btn-next carousel-control" id="next-md">></div>
+                                    </div>
+
+                                    <div class="carousel-item-new-york">
+                                        <div class="title" id="New-York">New York</div>
+                                        <div id="dataNy"></div>
+                                        <div id="czasNy"></div>
+                                        <div type="button" class="btn-prev carousel-control" id="previous-ny"><</div>
+                                        <div type="button" class="btn-next carousel-control" id="next-ny">></div>
+                                    </div>
+
+                                    <div class="carousel-item-london">
+                                        <div class="title" id="London">London</div>
+                                        <div id="dataLd"></div>
+                                        <div id="czasLd"></div>
+                                        <div type="button" class="btn-london carousel-control" id="previous-ld"><</div>
+                                        <div type="button" class="btn-london carousel-control" id="next-ld">></div>
+                                    </div>
+
+                                    <div class="carousel-item-beijing">
+                                        <div class="title" id="Beijing">Beijing</div>
+                                        <div id="dataBj"></div>
+                                        <div id="czasBj"></div>
+                                        <div type="button" class="btn-beijing carousel-control" id="previous-bj"><</div>
+                                        <div type="button" class="btn-beijing carousel-control" id="next-bj">></div>
+                                    </div>
+
+                                </div>                                                            
+                    </div>
+                </div>                   
+            </div>
+        </div>
+        
+
+        <script type="text/javascript" src="zegar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        
+        <script>
+            //warsaw
+            $(document).ready(function(){
+                $("#Tokyo").hide();
+                $("#Madrid").hide();
+                $("#New-York").hide();
+                $("#London").hide();
+                $("#Beijing").hide();
+                $("#previous-tk").hide();
+                $("#previous-md").hide();
+                $("#previous-ny").hide();
+                $("#previous-ld").hide();
+                $("#previous-bj").hide();
+                $("#next-tk").hide();
+                $("#next-md").hide();
+                $("#next-ny").hide();
+                $("#next-ld").hide();
+                $("#next-bj").hide();
+                $("#next-ws").click(function(){
+                    $("#Tokyo").fadeTo("fast", 1);
+                    $("#previous-tk").fadeTo("fast", 1);
+                    $("#next-tk").fadeTo("fast", 1);
+                    $( ".carousel-item-warsaw" ).slideToggle(function(){
+                        $(".carousel-item-tokyo").show();
+                        });
+                    });
+                });
+                
+            //tokyo 
+            $(document).ready(function(){
+                $("#previous-tk").click(function(){
+                    $("#previous-tk").hide();
+                    $("#next-tk").hide();
+                    $("#previous-md").hide();
+                    $("#previous-ld").hide();
+                    $("#previous-bj").hide();
+                    $("#next-md").hide();
+                    $("#next-ld").hide();
+                    $("#next-bj").hide();
+                    $("#Tokyo").hide();
+                    $("#Madrid").hide();
+                    $("#London").hide();
+                    $("#Beijing").hide();
+                    $("#Warsaw").fadeTo("fast", 1);
+                    $("#previous-ws").fadeTo("fast", 1);
+                    $("#next-ws").fadeTo("fast", 1);
+                    $(".carousel-item-tokyo").slideDown(function(){
+                        $(".carousel-item-warsaw").show();
+                    });
+                });                
+            }); 
+            
+            $(document).ready(function(){
+                $("#next-tk").click(function(){
+                    $("#Tokyo").hide();
+                    $("#next-tk").hide();
+                    $("#previous-tk").hide();
+                    $("#Madrid").fadeTo("fast", 1);
+                    $("#previous-md").fadeTo("fast", 1);
+                    $("#next-md").fadeTo("fast", 1);
+                    $(".carousel-item-tokyo").slideToggle(function(){
+                        $(".carousel-item-madrid").show();
+                    });
+                });
+            });
+
+            //madrid
+            $(document).ready(function(){
+                $("#previous-md").click(function(){
+                    $("#New-York").hide();
+                    $("#previous-ny").hide();
+                    $("#next-ny").hide();
+                    $("#previous-tk").hide();
+                    $("#next-tk").hide();
+                    $("#previous-md").hide();
+                    $("#next-md").hide();
+                    $("#previous-ld").hide();
+                    $("#next-ld").hide();
+                    $("#Tokyo").hide();
+                    $("#Madrid").hide();
+                    $("#London").hide();
+                    $("#Beijing").hide();
+                    $("#previous-bj").hide();
+                    $("#next-bj").hide();
+                    $("#Tokyo").fadeTo("fast", 1);
+                    $("#previous-tk").fadeTo("fast", 1);
+                    $("#next-tk").fadeTo("fast", 1);
+                    $(".carousel-item-madrid").slideDown(function(){
+                        $(".carousel-item-tokyo").show();
+                    });
+                });
+            });
+
+            $(document).ready(function(){
+                $("#next-md").click(function(){
+                    $("#Madrid").hide();
+                    $("#next-md").hide();
+                    $("#previous-md").hide();
+                    $("#New-York").fadeTo("fast", 1);
+                    $("#previous-ny").fadeTo("fast", 1);
+                    $("#next-ny").fadeTo("fast", 1);
+                    $(".carousel-item-madrid").slideToggle(function(){
+                        $(".carousel-item-new-york").show();
+                    }); 
+                });
+            });
+
+            //new york
+            $(document).ready(function(){
+                $("#previous-ny").click(function(){
+                    $("#New-York").hide();
+                    $("#previous-ny").hide();
+                    $("#next-ny").hide();
+                    $("#previous-tk").hide();
+                    $("#next-tk").hide();
+                    $("#previous-md").hide();
+                    $("#next-md").hide();
+                    $("#previous-ld").hide();
+                    $("#next-ld").hide();
+                    $("#Tokyo").hide();
+                    $("#Madrid").hide();
+                    $("#London").hide();
+                    $("#Beijing").hide();
+                    $("#previous-bj").hide();
+                    $("#next-bj").hide();
+                    $("#Madrid").fadeTo("fast", 1);
+                    $("#previous-md").fadeTo("fast", 1);
+                    $("#next-md").fadeTo("fast", 1);
+                    $(".carousel-item-new-york").slideDown(function(){
+                        $(".carousel-item-madrid").show();
+                    });
+                });
+            });
+
+            $(document).ready(function(){
+                $("#next-ny").click(function(){
+                    $("#New-York").hide();
+                    $("#next-ny").hide();
+                    $("#previous-ny").hide();
+                    $("#London").fadeTo("fast", 1);
+                    $("#previous-ld").fadeTo("fast", 1);
+                    $("#next-ld").fadeTo("fast", 1);
+                    $(".carousel-item-new-york").slideToggle(function(){
+                        $(".carousel-item-london").show();
+                    });
+                });
+            });
+
+            //london
+            $(document).ready(function(){
+                $("#previous-ld").click(function(){
+                    $("#New-York").hide();
+                    $("#previous-ny").hide();
+                    $("#next-ny").hide();
+                    $("#previous-tk").hide();
+                    $("#next-tk").hide();
+                    $("#previous-md").hide();
+                    $("#next-md").hide();
+                    $("#previous-ld").hide();
+                    $("#next-ld").hide();
+                    $("#Tokyo").hide();
+                    $("#Madrid").hide();
+                    $("#London").hide();
+                    $("#Beijing").hide();
+                    $("#previous-bj").hide();
+                    $("#next-bj").hide();
+                    $("#New-York").fadeTo("fast", 1);
+                    $("#previous-ny").fadeTo("fast", 1);
+                    $("#next-ny").fadeTo("fast", 1);
+                    $(".carousel-item-london").slideDown(function(){
+                        $(".carousel-item-new-york").show();
+                    });
+                });
+            });
+
+            $(document).ready(function(){
+                $("#next-ld").click(function(){
+                    $("#London").hide();
+                    $("#previous-ld").hide();
+                    $("#next-ld").hide();
+                    $("#Beijing").fadeTo("fast", 1);
+                    $("#previous-bj").fadeTo("fast", 1);
+                    $("#next-bj").fadeTo("fast", 1);
+                    $(".carousel-item-london").slideToggle(function(){
+                        $(".carousel-item-beijing").show();
+                    });
+                });
+            });
+
+            //beijing
+            $(document).ready(function(){
+                $("#previous-bj").click(function(){
+                    $("#New-York").hide();
+                    $("#previous-ny").hide();
+                    $("#next-ny").hide();
+                    $("#previous-tk").hide();
+                    $("#next-tk").hide();
+                    $("#previous-md").hide();
+                    $("#next-md").hide();
+                    $("#previous-ld").hide();
+                    $("#next-ld").hide();
+                    $("#Tokyo").hide();
+                    $("#Madrid").hide();
+                    $("#London").hide();
+                    $("#Beijing").hide();
+                    $("#previous-bj").hide();
+                    $("#next-bj").hide();
+                    $("#London").fadeTo("fast", 1);
+                    $("#previous-ld").fadeTo("fast", 1);
+                    $("#next-ld").fadeTo("fast", 1);
+                    $(".carousel-item-beijing").slideDown(function(){
+                        $(".carousel-item-london").show();
+                    });
+                });
+            });
+
+            $(document).ready(function(){
+                $("#next-bj").click(function(){
+                    $("#Beijing").hide();
+                    $("#previou-bj").hide();
+                    $("#next-bj").hide();
+                    $("#Warsaw").fadeTo("fast", 1);
+                    $("#previous-ws").fadeTo("fast", 1);
+                    $("#next-ws").fadeTo("fast", 1);
+                    $(".carousel-item-beijing").slideToggle(function(){
+                        $(".carousel-item-warsaw").show();
+                    });
+                });
+            });
+
+             
+        </script>
+        
+    </body>
+</html>

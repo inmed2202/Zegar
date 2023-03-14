@@ -1,0 +1,301 @@
+body{
+    margin: 0;
+    background-color: #eee;
+    background-image: url("Images/Background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    overflow: scroll;
+}
+
+.overlay{
+    background-color: rgba(70, 69, 69, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    backdrop-filter: blur(6px);
+}
+
+.container{
+    position: relative;
+    max-width: 20%;
+    min-width: 360px;
+    height: 300px;
+    width: 100%;
+    margin-left: 35%;
+    margin-top: 200px;
+}
+
+:focus{
+    outline: none;
+    -moz-animation: alternate;
+    -webkit-animation: normal;
+    animation: both;
+
+}
+
+.card{
+    width: 384px;
+    height: 600px;
+    margin-left: 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/*WArsaw Tokyo Madrid New York London Beijing*/
+.carousel-item-warsaw, .carousel-item-tokyo, .carousel-item-madrid, .carousel-item-new-york, .carousel-item-london, .carousel-item-beijing{
+    
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: .3s ease;
+    border-color: white;    
+    width: 384px;
+    height: 480px;
+    border-radius: 0%;
+    margin-top: 50px;
+    margin-left: -1px;
+      
+}
+
+.carousel-item-warsaw{
+    background-image: url("Images/Warsaw.jpg");
+    z-index: 7; 
+    position: absolute;
+}
+
+.carousel-item-tokyo, .carousel-item-madrid, .carousel-item-new-york, .carousel-item-london, .carousel-item-beijing{
+    position: fixed;
+}
+
+.carousel-item-tokyo{
+    background-image: url("Images/Tokyo.jpg");
+    z-index: 6;
+}
+
+.carousel-item-madrid{
+    background-image: url("Images/Madrid.jpg");
+    z-index: 5;
+}
+
+.carousel-item-new-york{
+    background-image: url("Images/New-York.jpg");
+    z-index: 4;
+}
+
+.carousel-item-london{
+    background-image: url("Images/London.jpg");
+    z-index: 3;
+}
+
+.carousel-item-beijing{
+    background-image: url("Images/Beijing.jpg");
+    z-index: 2;
+}
+
+#Warsaw, #Tokyo, #Madrid, #New-York, #London, #Beijing{
+    font-size: 48px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+    text-align: center;
+    margin-top: -60px;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: black;
+    
+}
+
+#Warsaw{
+    color: rgba(30, 86, 163, 0.9);
+    text-shadow: rgb(25, 46, 88) 0.1em 0.1em 0.3em;
+    z-index: 7;
+    
+}
+
+#Tokyo{
+    color: rgba(105, 70, 66, 0.9);
+    text-shadow: rgb(64, 31, 36) 0.1em 0.1em 0.3em;
+    z-index: 6;
+}
+
+#Madrid{
+    color: rgba(229, 200, 212, 0.9);
+    text-shadow: rgba(179, 138, 123, 0.9) 0.1em 0.1em 0.3em;
+    z-index: 5;
+}
+
+#New-York{
+    color: rgba(70, 90, 122, 0.9);
+    text-shadow: rgba(32, 38, 56, 0.9) 0.1em 0.1em 0.3em;
+    z-index: 4;
+}
+
+#London{
+    color: rgba(39, 43, 44, 0.9);
+    text-shadow: rgba(42, 48, 53, 0.9) 0.1em 0.1em 0.3em;
+    z-index: 3;
+}
+
+#Beijing{
+    color: rgba(70, 50, 55, 0.9);
+    text-shadow: rgba(52, 58, 67, 0.9) 0.1em 0.1em 0.3em;
+    z-index: 2;
+}
+
+#dataWs, #dataTk, #dataMd, #dataNy, #dataLd, #dataBj{
+    text-align: center;
+    padding-top: 35%;
+    font-size: 55px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+}
+
+#czasWs, #czasTk, #czasMd, #czasNy, #czasLd, #czasBj{
+    text-align: center;
+    padding-top: 1%;
+    font-size: 72px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#dataWs, #czasWs{
+    color: rgba(246, 237, 253, 0.9);
+    text-shadow: #eee 0.1em 0.1em 0.3em;
+}
+
+#dataTk, #czasTk{
+    color: rgba(241, 213, 167, 0.9);
+    text-shadow: #000 0.1em 0.1em 0.3em;
+}
+
+#dataMd, #czasMd{
+    color: rgba(242, 237, 233, 0.9);
+    text-shadow: #000 0.1em 0.1em 0.3em;
+}
+
+#dataNy, #czasNy{
+    color: rgba(217, 217, 157, 0.9);
+    text-shadow: #000 0.1em 0.1em 0.3em;
+}
+
+#dataLd, #czasLd{
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: #000 0.1em 0.1em 0.3em;
+}
+
+#dataBj, #czasBj{
+    color: rgba(246, 237, 253, 0.9);
+    text-shadow: #000 0.1em 0.1em 0.3em;
+}
+
+#previous-ws, #next-ws, #previous-tk, #next-tk, #previous-md, #next-md, #previous-ny, #next-ny, #previous-ld, #next-ld, #previous-bj, #next-bj{
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 18px;    
+    color: white;
+    border-radius: 30%;    
+    font-size: 25px;
+}
+
+#previous-ws, #next-ws{
+    background-color: rgba(30, 86, 163, 0.9);
+    margin-left: 120px;
+    margin-top: 143px;
+}
+
+#previous-ws:hover, #next-ws:hover{
+    background-color: rgba(185, 135, 202, 0.9);
+    color: beige;
+}
+
+#next-ws{
+    margin-left: 10%;
+}
+
+#previous-tk, #next-tk{
+    background-color: rgba(105, 70, 66, 0.9);
+    margin-left: 120px;
+    margin-top: 143px;
+}
+
+#previous-tk:hover, #next-tk:hover{
+    background-color: rgba(222, 184, 170, 0.9);
+    color: beige;
+}
+
+#next-tk{
+    margin-left: 10%;
+}
+
+#previous-md, #next-md{
+    background-color: rgba(229, 200, 212, 0.9);
+    margin-left: 120px;
+    margin-top: 143px;
+}
+
+#previous-md:hover, #next-md:hover{
+    background-color: rgba(238, 154, 63, 0.9);
+    color: beige;
+}
+
+#next-md{
+    margin-left: 10%;
+}
+
+#previous-ny, #next-ny{
+    background-color: rgba(70, 90, 122, 0.9);
+    margin-left: 120px;
+    margin-top: 143px;
+}
+
+#previous-ny:hover, #next-ny:hover{
+    background-color: rgba(77, 108, 68, 0.9);
+    color: beige;
+}
+
+#next-ny{
+    margin-left: 10%;
+}
+
+#previous-ld, #next-ld{
+    background-color: rgba(39, 43, 44, 0.9);
+    margin-left: 120px;
+    margin-top: 143px; 
+}
+
+#previous-ld:hover, #next-ld:hover{
+    background-color: rgba(179, 150, 132, 0.9);
+    color: beige;
+}
+
+#next-ld{
+    margin-left: 10%;
+}
+
+#previous-bj, #next-bj{
+    background-color: rgba(70, 50, 55, 0.9);
+    margin-left: 120px;
+    margin-top: 143px;
+}
+
+#previous-bj:hover, #next-bj:hover{
+    background-color: rgba(185, 169, 175, 0.9);
+    color: beige;
+}
+
+#next-bj{
+    margin-left: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
